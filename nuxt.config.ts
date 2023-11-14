@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     }
   },
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@vite-pwa/nuxt"],
+  modules: ["@nuxtjs/tailwindcss", "@vite-pwa/nuxt", "@pinia/nuxt"],
 
   pwa: {
     manifest: {
@@ -46,5 +46,14 @@ export default defineNuxtConfig({
     devOptions: {
       enabled: true,
     }
-  }
+  },
+
+  appConfig: {
+    apikey: process.env.SUPABASE_API_KEYS,
+    baseUrl: process.env.SUPABASE_URL,
+    secretKey: process.env.SUPABASE_SECRETS_KEY,
+    storageUrl: process.env.SUPABASE_STORAGE_URL,
+    baseStorageUrl: process.env.SUPABASE_GET_STORAGE_URL,
+  },
+
 })

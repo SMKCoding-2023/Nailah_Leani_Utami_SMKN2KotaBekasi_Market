@@ -1,12 +1,14 @@
 <script lang="ts" setup>
-import { products } from '~/composables/constants/products';
-const selectedCategory = ref("");
-const allProducts = computed(() => {
-    if (selectedCategory.value) {
-        return products.filter((item) => item.category === selectedCategory.value);
-    }
-    return products;
+import { useProductsStore } from "~/stores/product";
+
+const productStore = useProductsStore();
+const allProducts = ref([]);
+
+productStore.getAllProducts().then(() => {
+    allProducts.value = productStore.products;
 });
+
+const selectedCategory = ref("");
 </script>
 <template>
     <section>
