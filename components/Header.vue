@@ -109,7 +109,7 @@ const logout = async () => {
             >Projects</a
           > -->
             <nuxt-link
-              to="/products"
+              to="/product"
               class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
               >Product</nuxt-link
             >
@@ -118,13 +118,13 @@ const logout = async () => {
               class="text-base bg-purple-500 px-6 py-2 text-white rounded-lg hover:bg-purple-500/80"
               >Login</NuxtLink
             >
-            <div
+            <!-- <div
               v.else
               class="text-base cursor-pointer bg-grey-400 px-6 py-2 text-white rounded-lg hover:bg-grey-400/80"
               @click="logout"
             >
               logout
-            </div>
+            </div> -->
           </li>
         </ul>
       </div>
